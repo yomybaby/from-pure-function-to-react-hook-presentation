@@ -15,52 +15,26 @@ import './App.css';
 // 3. 함수지만 기억할 수 있다.
 // 4. Pure한가?
 
-// class CounterButton extends React.Component {
-//   state = {
-//     count: 0
-//   };
-//   render() {
-//     console.log('render <CounterButton/>');
-//     return (
-//       <button
-//         onClick={() => {
-//           this.setState({
-//             count: this.state.count + 1
-//           });
-//         }}
-//       >
-//         {this.props.title} : {this.state.count}
-//       </button>
-//     );
-//   }
-// }
-
-function useGlobalCountState(initVal) {
-  const [count, dispatch] = useSelector();
-
-  return [
-    count,
-    () => {
-      dispatch(count + 1);
-    }
-  ];
+class CounterButton extends React.Component {
+  state = {
+    count: 0
+  };
+  render() {
+    console.log('render <CounterButton/>');
+    return (
+      <button
+        onClick={() => {
+          this.setState({
+            count: this.state.count + 1
+          });
+        }}
+      >
+        {this.props.title} : {this.state.count}
+      </button>
+    );
+  }
 }
 
-function MYCounterTitle() {
-  const [count, increse] = useGlobalCountState(0);
-}
-
-function CounterButton({ title }) {
-  const [count, increse] = useGlobalCountState(0);
-
-  return (
-    <button onClick={increse}>
-      {title} : {count}
-    </button>
-  );
-}
-
-let cnt = 0;
 function App() {
   return (
     <div className="App">
