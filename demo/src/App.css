@@ -1,0 +1,33 @@
+.App {
+  text-align: center;
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+button {
+  border-radius: 10px;
+  border-color: aquamarine;
+  margin: 20px;
+  padding: 20px;
+  font-size: calc(10px + 2vmin);
+  font-weight: bold;
+  color: white;
+  background-color: #09d3ac;
+}
+
+.WeatherDetail {
+  width: 50vh;
+  padding: 20px;
+  margin: 20px;
+  background-color: gray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

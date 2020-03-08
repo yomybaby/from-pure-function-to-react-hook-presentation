@@ -1,0 +1,21 @@
+{
+  "name": "from-pure-function-to-hook-presentation",
+  "version": "1.0.0",
+  "main": "example.js",
+  "scripts": {
+    "start": "marp -w",
+    "build": "marp --pdf && marp"
+  },
+  "marp": {
+    "inputDir": "./slides",
+    "output": "./public",
+    "allowLocalFiles": true,
+    "html": true
+  },
+  "author": "Jongeun Lee",
+  "license": "MIT",
+  "description": "",
+  "devDependencies": {
+    "@marp-team/marp-cli": "^0.17.2"
+  }
+}
